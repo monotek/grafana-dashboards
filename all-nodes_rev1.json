@@ -1,42 +1,16 @@
 {
-  "__inputs": [
-    {
-      "description": "Prometheus data source",
-      "label": "prometheus",
-      "name": "DS_PROMETHEUS",
-      "pluginId": "prometheus",
-      "pluginName": "Prometheus",
-      "type": "datasource"
-    }
-  ],
-  "__requires": [
-    {
-      "id": "grafana",
-      "name": "Grafana",
-      "type": "grafana",
-      "version": "4.1.1"
-    },
-    {
-      "id": "graph",
-      "name": "Graph",
-      "type": "panel",
-      "version": ""
-    },
-    {
-      "id": "prometheus",
-      "name": "Prometheus",
-      "type": "datasource",
-      "version": "1.0.0"
-    },
-    {
-      "id": "singlestat",
-      "name": "Singlestat",
-      "type": "panel",
-      "version": ""
-    }
-  ],
   "annotations": {
-    "list": []
+    "list": [
+      {
+        "builtIn": 1,
+        "datasource": "-- Grafana --",
+        "enable": true,
+        "hide": true,
+        "iconColor": "rgba(0, 211, 255, 1)",
+        "name": "Annotations & Alerts",
+        "type": "dashboard"
+      }
+    ]
   },
   "description": "Dashboard to get an overview of all nodes in a Kubernetes Cluster",
   "editable": true,
@@ -857,6 +831,93 @@
         "align": false,
         "alignLevel": null
       }
+    },
+    {
+      "aliasColors": {},
+      "bars": false,
+      "dashLength": 10,
+      "dashes": false,
+      "datasource": "Prometheus",
+      "fill": 1,
+      "gridPos": {
+        "h": 8,
+        "w": 24,
+        "x": 0,
+        "y": 28
+      },
+      "id": 12,
+      "legend": {
+        "alignAsTable": true,
+        "avg": true,
+        "current": true,
+        "max": true,
+        "min": false,
+        "rightSide": true,
+        "show": true,
+        "total": false,
+        "values": true
+      },
+      "lines": true,
+      "linewidth": 1,
+      "links": [],
+      "nullPointMode": "null",
+      "percentage": false,
+      "pointradius": 5,
+      "points": false,
+      "renderer": "flot",
+      "seriesOverrides": [],
+      "spaceLength": 10,
+      "stack": false,
+      "steppedLine": false,
+      "targets": [
+        {
+          "expr": "kubelet_volume_stats_available_bytes - kubelet_volume_stats_used_bytes  ",
+          "format": "time_series",
+          "hide": false,
+          "intervalFactor": 1,
+          "legendFormat": "{{persistentvolumeclaim}}",
+          "refId": "A"
+        }
+      ],
+      "thresholds": [],
+      "timeFrom": null,
+      "timeShift": null,
+      "title": "PVC  free",
+      "tooltip": {
+        "shared": true,
+        "sort": 0,
+        "value_type": "individual"
+      },
+      "type": "graph",
+      "xaxis": {
+        "buckets": null,
+        "mode": "time",
+        "name": null,
+        "show": true,
+        "values": []
+      },
+      "yaxes": [
+        {
+          "format": "bytes",
+          "label": null,
+          "logBase": 1,
+          "max": null,
+          "min": null,
+          "show": true
+        },
+        {
+          "format": "short",
+          "label": null,
+          "logBase": 1,
+          "max": null,
+          "min": null,
+          "show": false
+        }
+      ],
+      "yaxis": {
+        "align": false,
+        "alignLevel": null
+      }
     }
   ],
   "refresh": false,
@@ -900,5 +961,5 @@
   "timezone": "browser",
   "title": "Kubernetes All Nodes",
   "uid": "NRGI3lFmz",
-  "version": 232
+  "version": 1
 }
