@@ -1,4 +1,5 @@
- "__inputs": [
+{
+  "__inputs": [
     {
       "name": "DS_PROMETHEUS",
       "label": "Prometheus",
@@ -11,7 +12,7 @@
       "name": "VAR_COSTCPU",
       "type": "constant",
       "label": "CPU",
-      "value": "22.89",
+      "value": "22.90",
       "description": ""
     },
     {
@@ -107,7 +108,7 @@
   "gnetId": 6873,
   "graphTooltip": 0,
   "id": null,
-  "iteration": 1537442254495,
+  "iteration": 1537447291074,
   "links": [],
   "panels": [
     {
