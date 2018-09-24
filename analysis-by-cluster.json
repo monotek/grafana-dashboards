@@ -63,7 +63,7 @@
       "type": "grafana",
       "id": "grafana",
       "name": "Grafana",
-      "version": "5.2.3"
+      "version": "5.2.1"
     },
     {
       "type": "datasource",
@@ -108,7 +108,7 @@
   "gnetId": 6873,
   "graphTooltip": 0,
   "id": null,
-  "iteration": 1537447291074,
+  "iteration": 1530978789642,
   "links": [],
   "panels": [
     {
@@ -1465,5 +1465,5 @@
   "timezone": "browser",
   "title": "Analysis by Cluster",
   "uid": "at-cost-analysis",
-  "version": 2
+  "version": 6
 }
