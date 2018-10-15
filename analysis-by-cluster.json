@@ -1,4 +1,14 @@
 {
+  "__inputs": [
+    {
+      "name": "DS_PROMETHEUS",
+      "label": "Prometheus",
+      "description": "",
+      "type": "datasource",
+      "pluginId": "prometheus",
+      "pluginName": "Prometheus"
+    }
+  ],
   "__requires": [
     {
       "type": "grafana",
@@ -76,7 +86,7 @@
         "rgba(50, 172, 45, 0.97)",
         "#c15c17"
       ],
-      "datasource": "prometheus",
+      "datasource": "${DS_PROMETHEUS}",
       "decimals": 2,
       "description": "This gauge shows the current CPU use vs CPU available",
       "editable": true,
@@ -166,7 +176,7 @@
         "rgba(50, 172, 45, 0.97)",
         "#c15c17"
       ],
-      "datasource": "prometheus",
+      "datasource": "${DS_PROMETHEUS}",
       "decimals": 2,
       "description": "This panel shows current CPU reservation requests by applications, vs CPU available",
       "editable": true,
@@ -254,7 +264,7 @@
         "rgba(237, 129, 40, 0.89)",
         "#d44a3a"
       ],
-      "datasource": "prometheus",
+      "datasource": "${DS_PROMETHEUS}",
       "decimals": 2,
       "format": "currencyUSD",
       "gauge": {
@@ -312,7 +322,7 @@
           "instant": true,
           "interval": "",
           "intervalFactor": 1,
-          "legendFormat": " {{"{{ node }}"}}",
+          "legendFormat": " {{ node }}",
           "refId": "A"
         }
       ],
@@ -339,7 +349,7 @@
         "rgba(237, 129, 40, 0.89)",
         "#d44a3a"
       ],
-      "datasource": "prometheus",
+      "datasource": "${DS_PROMETHEUS}",
       "decimals": 2,
       "format": "currencyUSD",
       "gauge": {
@@ -397,7 +407,7 @@
           "instant": true,
           "interval": "",
           "intervalFactor": 1,
-          "legendFormat": " {{"{{ node }}"}}",
+          "legendFormat": "{{ node }}",
           "refId": "A"
         }
       ],
@@ -422,7 +432,7 @@
           "value": "avg"
         }
       ],
-      "datasource": "prometheus",
+      "datasource": "${DS_PROMETHEUS}",
       "description": "This table shows the comparison of CPU and RAM requests by applications, vs the capacity of the node",
       "fontSize": "100%",
       "gridPos": {
@@ -520,7 +530,7 @@
           "format": "table",
           "instant": true,
           "intervalFactor": 1,
-          "legendFormat": "{{"{{ node }}"}}",
+          "legendFormat": "{{ node }}",
           "refId": "B"
         },
         {
@@ -530,7 +540,7 @@
           "instant": true,
           "interval": "",
           "intervalFactor": 1,
-          "legendFormat": "{{"{{ node }}"}}",
+          "legendFormat": "{{ node }}",
           "refId": "A"
         }
       ],
@@ -550,7 +560,7 @@
         "rgba(50, 172, 45, 0.97)",
         "#c15c17"
       ],
-      "datasource": "prometheus",
+      "datasource": "${DS_PROMETHEUS}",
       "description": "This gauge shows current RAM use by RAM available",
       "editable": true,
       "error": false,
@@ -640,7 +650,7 @@
         "rgba(50, 172, 45, 0.97)",
         "#c15c17"
       ],
-      "datasource": "prometheus",
+      "datasource": "${DS_PROMETHEUS}",
       "description": "This panel shows current RAM reservation requests by applications, vs RAM available",
       "editable": true,
       "error": false,
@@ -728,7 +738,7 @@
         "rgba(237, 129, 40, 0.89)",
         "#d44a3a"
       ],
-      "datasource": "prometheus",
+      "datasource": "${DS_PROMETHEUS}",
       "decimals": 2,
       "format": "currencyUSD",
       "gauge": {
@@ -786,7 +796,7 @@
           "instant": true,
           "interval": "",
           "intervalFactor": 1,
-          "legendFormat": "{{"{{ node }}"}}",
+          "legendFormat": "{{ node }}",
           "refId": "A"
         }
       ],
@@ -813,7 +823,7 @@
         "rgba(237, 129, 40, 0.89)",
         "#d44a3a"
       ],
-      "datasource": "prometheus",
+      "datasource": "${DS_PROMETHEUS}",
       "decimals": 2,
       "format": "currencyUSD",
       "gauge": {
@@ -871,7 +881,7 @@
           "instant": true,
           "interval": "",
           "intervalFactor": 1,
-          "legendFormat": "{{"{{ node }}"}}",
+          "legendFormat": "{{ node }}",
           "refId": "A"
         }
       ],
@@ -896,7 +906,7 @@
           "value": "avg"
         }
       ],
-      "datasource": "prometheus",
+      "datasource": "${DS_PROMETHEUS}",
       "fontSize": "100%",
       "gridPos": {
         "h": 11,
@@ -1064,7 +1074,7 @@
           "instant": true,
           "interval": "",
           "intervalFactor": 1,
-          "legendFormat": "{{"{{ namespace }}"}}",
+          "legendFormat": "{{ namespace }}",
           "refId": "A"
         },
         {
@@ -1072,7 +1082,7 @@
           "format": "table",
           "instant": true,
           "intervalFactor": 1,
-          "legendFormat": "{{"{{ namespace }}"}}",
+          "legendFormat": "{{ namespace }}",
           "refId": "E"
         },
         {
@@ -1080,7 +1090,7 @@
           "format": "table",
           "instant": true,
           "intervalFactor": 1,
-          "legendFormat": "{{"{{ namespace }}"}}",
+          "legendFormat": "{{ namespace }}",
           "refId": "B"
         },
         {
@@ -1088,7 +1098,7 @@
           "format": "table",
           "instant": true,
           "intervalFactor": 1,
-          "legendFormat": "{{"{{ namespace }}"}}",
+          "legendFormat": "{{ namespace }}",
           "refId": "F"
         },
         {
@@ -1096,7 +1106,7 @@
           "format": "table",
           "instant": true,
           "intervalFactor": 1,
-          "legendFormat": "{{"{{ namespace }}"}}",
+          "legendFormat": "{{ namespace }}",
           "refId": "C"
         },
         {
@@ -1121,7 +1131,7 @@
           "value": "avg"
         }
       ],
-      "datasource": "prometheus",
+      "datasource": "${DS_PROMETHEUS}",
       "fontSize": "100%",
       "gridPos": {
         "h": 11,
@@ -1230,7 +1240,7 @@
           "instant": true,
           "interval": "",
           "intervalFactor": 1,
-          "legendFormat": "{{"{{ persistentvolumeclaim }}"}}",
+          "legendFormat": "{{ persistentvolumeclaim }}",
           "refId": "A"
         }
       ],
