@@ -871,7 +871,7 @@
       "steppedLine": false,
       "targets": [
         {
-          "expr": "kubelet_volume_stats_available_bytes - kubelet_volume_stats_used_bytes  ",
+          "expr": "kubelet_volume_stats_available_bytes",
           "format": "time_series",
           "hide": false,
           "intervalFactor": 1,
